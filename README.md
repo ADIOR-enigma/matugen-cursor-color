@@ -93,3 +93,6 @@ To dynamically load the theme without slowing down Hyprland boot, source the Lua
 -- This avoids slow gsettings shell commands during boot
 pcall(dofile, os.getenv("HOME") .. "/.config/hypr/generated/cursor.lua")
 ```
+
+> [!IMPORTANT]
+> **Restart Required:** After completing all setup steps, you must log out and log back in, or completely restart Hyprland, for the new cursor daemon and environment variables to initialize properly.
