@@ -22,7 +22,24 @@ mkdir -p ~/.local/share
 git clone https://github.com/ndom91/rose-pine-hyprcursor ~/.local/share/hyprcursor-matugen
 ```
 
-### 3. The Generator Script
+## 3. Matugen Template Setup
+
+To generate the colors file that the cursor script reads, you need to configure Matugen to output a Lua file with your colors.
+
+1. Copy the provided template to your Matugen templates directory:
+```bash
+mkdir -p ~/.config/matugen/templates
+cp templates/hyprland-colors.lua ~/.config/matugen/templates/
+```
+
+2. Add the template to your `~/.config/matugen/config.toml`:
+```toml
+[templates.hyprland-colors]
+input_path = "~/.config/matugen/templates/hyprland-colors.lua"
+output_path = "~/.config/matugen/generated/hyprland-colors.lua"
+```
+
+## 4. The Generator Script
 Create the following script at `~/.config/hypr/scripts/matugen-cursor.sh`. This handles compiling the SVG vectors, setting legacy fallbacks, and hot-reloading Hyprland.
 
 ```bash
@@ -238,7 +255,7 @@ main() {
 main
 ```
 
-## 4. The Watcher Daemon
+## 5. The Watcher Daemon
 Create the following script at `~/.config/hypr/scripts/matugen-cursor-watcher.sh`.
 
 ```bash
@@ -323,7 +340,7 @@ hl.on("hyprland.start", function()
 end)
 ```
 
-## 5. Configuration & Anti-Aliasing
+## 6. Configuration & Anti-Aliasing
 
 To avoid pixelation in the `hypr-dynamic-cursors` plugin, ensure it is set to **not** force nearest-neighbor rendering:
 ```lua
