@@ -14,7 +14,7 @@ Yes, **you absolutely need the source assets!** The script relies on these raw S
 
 ```bash
 mkdir -p ~/.local/share
-git clone https://github.com/sejjy/hyprcursor-matugen ~/.local/share/hyprcursor-matugen
+git clone https://github.com/ndom91/rose-pine-hyprcursor ~/.local/share/hyprcursor-matugen
 ```
 
 ### 3. The Generator Script
