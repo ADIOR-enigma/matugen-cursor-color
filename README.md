@@ -1,4 +1,9 @@
-# Matugen Dynamic Cursors Setup Guide
+<div align="center">
+  <img src="images/matugen_cursor.gif" alt="Cursor icon" width="150">
+
+# matugen-cursor-colour
+
+</div>
 
 This guide contains everything needed to set up a fully dynamic, color-matching, anti-aliased Wayland cursor theme that updates instantly when system colors change via Matugen hooks.
 
