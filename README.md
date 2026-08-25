@@ -1,7 +1,7 @@
 <div align="center">
   <img src="images/matugen_cursor.gif" alt="Cursor icon" width="100">
 
-# matugen-cursor-colour
+# matugen-cursor-ᥴꪮꪶꪮꪊ᥅
 
 </div>
 
