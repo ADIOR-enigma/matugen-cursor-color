@@ -62,8 +62,8 @@ wait_for_colors() {
 get_color() {
   local key="$1" fallback="$2"
   local raw
-  raw=$(grep -E "^\s*$key\s*=" "$COLORS_LUA" 2>/dev/null | head -n1 | grep -oE '[0-9a-fA-F]{6,8}' | head -n1 | cut -c1-6 || true)
-  [[ -n "$raw" ]] && echo "#$raw" || echo "$fallback"
+  raw=$(grep -E "^\s*$key\s*=" "$COLORS_LUA" 2>/dev/null | head -n1 | cut -d'"' -f2 || true)
+  [[ -n "$raw" ]] && echo "$raw" || echo "$fallback"
 }
 
 # -----------------------------------------------------------------------------
