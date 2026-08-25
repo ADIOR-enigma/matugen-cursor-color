@@ -304,9 +304,18 @@ Make both scripts executable:
 ```bash
 chmod +x ~/.config/hypr/scripts/matugen-cursor*.sh
 ```
-Finally, tell Hyprland to launch the watcher daemon when you log in by adding this to your hyprland config:
+Finally, tell Hyprland to launch the watcher daemon when you log in:
+
+**For standard Hyprland (`hyprland.conf`):**
 ```bash
 exec-once = bash ~/.config/hypr/scripts/matugen-cursor-watcher.sh
+```
+
+**For Lua-based Hyprland wrappers (`autostart.lua`):**
+```lua
+hl.on("hyprland.start", function()
+    hl.exec_cmd("bash ~/.config/hypr/scripts/matugen-cursor-watcher.sh")
+end)
 ```
 
 ## 5. Configuration & Anti-Aliasing
